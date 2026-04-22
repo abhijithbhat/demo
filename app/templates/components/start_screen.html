@@ -1,25 +1,46 @@
 <div id="game-container">
-<div class="flex flex-col items-center justify-center min-h-full p-6 bg-gray-50">
-    <div class="text-center max-w-sm">
-        <h1 class="text-4xl font-bold text-gray-900 mb-2">Soc Ops</h1>
-        <p class="text-lg text-gray-600 mb-8">Social Bingo</p>
+<div class="maximal-start flex flex-col items-center justify-center min-h-full p-6">
+    <div class="maximal-layout">
+        <section class="maximal-hero-block">
+            <p class="maximal-kicker">🎮 MAXIMAL MODE ⚡</p>
+            <h1 class="text-5xl text-gray-900 font-bold mb-2 maximal-title">Soc Ops</h1>
+            <p class="text-6xl font-bold text-gray-900 mb-4 maximal-subtitle">Social Bingo</p>
+            <p class="text-lg text-gray-900 mb-6 maximal-tagline">Meet, laugh, and light up the room with every square.</p>
+            <div class="maximal-cta-row mb-6">
+                <button
+                    hx-post="/start"
+                    hx-target="#game-container"
+                    hx-swap="outerHTML"
+                    class="maximal-cta-button w-full text-white font-bold py-4 px-8 rounded-lg text-lg transition-all">
+                    🚀 Start Game
+                </button>
+                <a href="#maximal-rules" class="maximal-secondary-button text-gray-900 font-bold text-lg">📘 How to play</a>
+            </div>
+            <div class="maximal-floaters">
+                <span>🔥</span>
+                <span>🕹️</span>
+                <span>🎯</span>
+            </div>
+        </section>
 
-        <div class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 mb-8">
-            <h2 class="font-semibold text-gray-800 mb-3">How to play</h2>
-            <ul class="text-left text-gray-600 text-sm space-y-2">
-                <li>• Find people who match the questions</li>
-                <li>• Tap a square when you find a match</li>
-                <li>• Get 5 in a row to win!</li>
+        <section id="maximal-rules" class="maximal-rules-block">
+            <h2 class="font-bold text-gray-900 mb-3 text-3xl">🎉 How to play</h2>
+            <ul class="text-left text-gray-900 text-lg space-y-2">
+                <li>🧩 Find people who match each bingo prompt</li>
+                <li>✅ Tap a square when you get a real match</li>
+                <li>🏆 Get 5 in a row and celebrate loudly</li>
             </ul>
-        </div>
+        </section>
 
-        <button
-            hx-post="/start"
-            hx-target="#game-container"
-            hx-swap="outerHTML"
-            class="w-full bg-accent text-white font-semibold py-4 px-8 rounded-lg text-lg active:bg-accent-light transition-colors">
-            Start Game
-        </button>
+        <section class="maximal-experiment-block">
+            <h2 class="font-bold text-gray-900 mb-3 text-3xl">📊 Design experiment goals</h2>
+            <ul class="text-left text-gray-900 text-lg space-y-2">
+                <li>🎈 Perceived fun and excitement</li>
+                <li>👀 Visual engagement and attention-grabbing</li>
+                <li>🧭 Information hierarchy clarity</li>
+                <li>⚖️ Visual fatigue or information overload concerns</li>
+            </ul>
+        </section>
     </div>
 </div>
 </div>

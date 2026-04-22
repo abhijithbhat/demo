@@ -20,6 +20,12 @@ class TestHomePage:
         assert "Start Game" in response.text
         assert "How to play" in response.text
 
+    def test_home_contains_maximalist_experiment_content(self, client: TestClient):
+        response = client.get("/")
+        assert "MAXIMAL MODE" in response.text
+        assert "Design experiment goals" in response.text
+        assert "Visual engagement and attention-grabbing" in response.text
+
     def test_home_sets_session_cookie(self, client: TestClient):
         response = client.get("/")
         assert "session" in response.cookies
