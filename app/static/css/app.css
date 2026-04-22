@@ -206,6 +206,7 @@ button:disabled {
     aspect-ratio: 1 / 1;
     border-radius: 999px;
     filter: blur(10px);
+    will-change: filter;
     opacity: 0.72;
     pointer-events: none;
 }
