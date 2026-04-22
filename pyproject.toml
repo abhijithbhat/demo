@@ -26,7 +26,14 @@ target-version = "py313"
 line-length = 88
 
 [tool.ruff.lint]
-select = ["E", "F", "I", "N", "W"]
+select = ["E", "F", "I", "N", "W", "UP", "ARG", "RUF100"]
+
+# Specific rules to enforce
+# F841: local variable assigned but never used
+# F842: unused variable (local)
+# UP: modernize type hints
+# ARG: detect unused function arguments
+# RUF100: unused noqa comments
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
