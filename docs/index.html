@@ -14,31 +14,28 @@
     <title>VS Code GitHub Copilot Agent Lab | Python Edition</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="alternate" hreflang="en" href="https://copilot-dev-days.github.io/agent-lab-python/">
     <link rel="alternate" hreflang="pt-BR" href="https://copilot-dev-days.github.io/agent-lab-python/pt_BR/">
     <link rel="alternate" hreflang="es" href="https://copilot-dev-days.github.io/agent-lab-python/es/">
     <link rel="alternate" hreflang="x-default" href="https://copilot-dev-days.github.io/agent-lab-python/">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="light-theme.css">
-    <script src="theme-toggle.js"></script>
 </head>
 <body>
     <div style="position:fixed;top:1rem;right:1rem;z-index:1000;display:flex;gap:0.5rem;align-items:center;">
         <div class="locale-picker" id="localePicker">
-            <button type="button" class="locale-toggle" aria-haspopup="listbox" aria-expanded="false" aria-label="Select language">🌐</button>
+            <button type="button" class="locale-toggle" aria-haspopup="listbox" aria-expanded="false" aria-label="Select language">Lang</button>
             <ul role="listbox" aria-label="Language">
-                <li role="option" data-locale="en" aria-selected="true" class="active">🇬🇧 English</li>
-                <li role="option" data-locale="es" aria-selected="false">🇪🇸 Español</li>
-                <li role="option" data-locale="pt-BR" aria-selected="false">🇧🇷 Português (Brasil)</li>
+                <li role="option" data-locale="en" aria-selected="true" class="active">English</li>
+                <li role="option" data-locale="es" aria-selected="false">Español</li>
+                <li role="option" data-locale="pt-BR" aria-selected="false">Português (Brasil)</li>
             </ul>
         </div>
-        <button class="theme-toggle" onclick="toggleTheme()">☀️ Light</button>
     </div>
     <div class="container">
         <!-- Hero -->
         <section class="hero">
-            <span class="hero-badge">🚀 Python + FastAPI + HTMX</span>
+            <span class="hero-badge">Python + FastAPI + HTMX</span>
             <h1>VS Code GitHub Copilot Agent Lab</h1>
             <p class="hero-subtitle">
                 Build a Social Bingo game while mastering VS Code's Agent Mode with GitHub Copilot. 
@@ -46,10 +43,10 @@
             </p>
             <div class="hero-cta">
                 <a href="step.html?step=00-overview" class="btn btn-primary">
-                    🚀 Start Workshop
+                    Start Workshop
                 </a>
                 <a href="https://github.com/copilot-dev-days/agent-lab-python" class="btn btn-secondary">
-                    📦 GitHub Repo
+                    GitHub Repo
                 </a>
             </div>
             <p class="hero-also">Also available in <a href="https://copilot-dev-days.github.io/agent-lab-dotnet/">.NET</a>, <a href="https://copilot-dev-days.github.io/agent-lab-java/">Java</a>, and <a href="https://copilot-dev-days.github.io/agent-lab-typescript/">TypeScript</a></p>
@@ -74,22 +71,22 @@
             <h2 class="section-title">What You'll Learn</h2>
             <div class="features-grid">
                 <div class="feature-card">
-                    <div class="feature-icon">🧠</div>
+                    <div class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 5.5a3.5 3.5 0 0 0-3.5 3.5V10a3 3 0 0 0 0 6v.5A3.5 3.5 0 0 0 9 20h1v-5H8.5M15 5.5A3.5 3.5 0 0 1 18.5 9V10a3 3 0 0 1 0 6v.5A3.5 3.5 0 0 1 15 20h-1v-5h1.5M10 9h4M10 13h4"/></svg></div>
                     <h3>Context Engineering</h3>
                     <p>Teach AI about your codebase with instructions, making Copilot suggestions more accurate and relevant.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">🤖</div>
+                    <div class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="5" y="7" width="14" height="12" rx="3"/><path d="M12 3v4M9 12h.01M15 12h.01M8 16h8"/></svg></div>
                     <h3>Agentic Primitives</h3>
                     <p>Use background agents, cloud agents, and custom workflows to scale your development.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">🎨</div>
+                    <div class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 4a8 8 0 1 0 0 16h1.3a2.2 2.2 0 0 0 0-4.4H12a2.6 2.6 0 0 1 0-5.2h2.2A3.8 3.8 0 0 0 18 6.6 8.1 8.1 0 0 0 12 4Z"/><path d="M8 9h.01M12 7.5h.01M15 9.5h.01"/></svg></div>
                     <h3>Design-First Development</h3>
                     <p>Let AI iterate on UI while you guide the creative vision with specialized design agents.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">🧪</div>
+                    <div class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M10 3h4M11 3v5l-4.8 8.3A2 2 0 0 0 7.9 19h8.2a2 2 0 0 0 1.7-2.7L13 8V3"/><path d="M9 14h6"/></svg></div>
                     <h3>Test-Driven Development</h3>
                     <p>Build reliable features using TDD agents with Red-Green-Refactor workflow.</p>
                 </div>
@@ -171,7 +168,7 @@
                 <a href="https://github.com/github/awesome-copilot">Awesome Copilot</a>
             </div>
             <p class="footer-credit">
-                Built with 💜 by the VS Code Team
+                Built by the VS Code Team
             </p>
         </footer>
     </div>
