@@ -1,12 +1,30 @@
 🌐 [Português (BR)](README.pt_BR.md) | [Español](README.es.md)
 
-# Soc Ops
+# Soc Ops 🎯
 
-Social Bingo game for in-person mixers. Find people who match the questions and get 5 in a row!
+> Turn any in-person mixer into a fun, fast social challenge.
 
----
+Soc Ops is a Social Bingo game where players discover people who match each square, mark the board, and race for 5 in a row.
+
+## Why this project is fun
+
+- 🧊 **Great icebreaker** for team offsites, classes, and meetups
+- ⚡ **Quick rounds** that keep energy high
+- 🧠 **Simple game loop** built with FastAPI + Jinja templates
+- 🧪 **Hands-on lab repo** for practicing GitHub Copilot agent workflows
+
+## 🚀 Quick Start
+
+```bash
+pip install -e ".[dev]"
+soc-ops
+```
+
+Then open [http://localhost:8000](http://localhost:8000) and start a round.
 
 ## 📚 Lab Guide
+
+Follow the workshop from intro to multi-agent development:
 
 | Part | Title |
 |------|-------|
@@ -16,10 +34,9 @@ Social Bingo game for in-person mixers. Find people who match the questions and 
 | [**03**](https://copilot-dev-days.github.io/agent-lab-python/docs/step.html?step=03-quiz-master) | Custom Quiz Master |
 | [**04**](https://copilot-dev-days.github.io/agent-lab-python/docs/step.html?step=04-multi-agent) | Multi-Agent Development |
 
-> 📝 Lab guides are also available in the [`workshop/`](workshop/) folder for offline reading.
+> 📝 Prefer offline reading? Use the guides in [`workshop/`](workshop/).
 
----
+## 🛠️ Development
 
-## 🚀 Getting Started
-
-Head to **[Part 00: Overview](https://copilot-dev-days.github.io/agent-lab-python/step.html?step=00-overview)** for prerequisites and setup instructions.
+- Run tests: `pytest -q`
+- Run linting: `ruff check .`
