@@ -239,7 +239,7 @@ button:disabled {
 .maximal-title,
 .maximal-subtitle {
     text-transform: uppercase;
-    font-family: Impact, Haettenschweiler, "Arial Black", sans-serif;
+    font-family: "Trebuchet MS", "Arial Black", Impact, Haettenschweiler, sans-serif;
     text-shadow: 3px 3px 0 rgba(255, 255, 255, 0.7), 6px 6px 0 rgba(17, 24, 39, 0.45);
 }
 
@@ -312,7 +312,7 @@ button:disabled {
 }
 
 @keyframes maximal-rise {
-    from { opacity: 0; transform: translateY(20px) scale(0.96); }
+    from { opacity: 0; }
     to { opacity: 1; }
 }
 
@@ -335,5 +335,21 @@ button:disabled {
 
     .maximal-cta-row {
         grid-template-columns: minmax(0, 1fr) auto;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .maximal-start::before,
+    .maximal-start::after,
+    .maximal-hero-block,
+    .maximal-rules-block,
+    .maximal-experiment-block,
+    .maximal-floaters span {
+        animation: none;
+    }
+
+    .maximal-cta-button,
+    .maximal-secondary-button {
+        transition: none;
     }
 }
