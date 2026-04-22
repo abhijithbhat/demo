@@ -1,25 +1,88 @@
 <div id="game-container">
-<div class="flex flex-col items-center justify-center min-h-full p-6 bg-gray-50">
-    <div class="text-center max-w-sm">
-        <h1 class="text-4xl font-bold text-gray-900 mb-2">Soc Ops</h1>
-        <p class="text-lg text-gray-600 mb-8">Social Bingo</p>
+<div class="flex flex-col items-center justify-center min-h-full p-6 relative overflow-hidden">
+    <!-- Animated background elements -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none">
+        <div class="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-accent via-transparent to-transparent rounded-full blur-3xl opacity-20 animate-pulse"></div>
+        <div class="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-success via-transparent to-transparent rounded-full blur-3xl opacity-15 animate-pulse" style="animation-delay: 1s;"></div>
+    </div>
 
-        <div class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 mb-8">
-            <h2 class="font-semibold text-gray-800 mb-3">How to play</h2>
-            <ul class="text-left text-gray-600 text-sm space-y-2">
-                <li>• Find people who match the questions</li>
-                <li>• Tap a square when you find a match</li>
-                <li>• Get 5 in a row to win!</li>
-            </ul>
+    <!-- Main content -->
+    <div class="text-center max-w-md relative z-10">
+        <!-- Logo/Title Section -->
+        <div class="mb-8 animate-fadeInDown">
+            <div class="text-5xl font-bold mb-2 inline-block">🎲</div>
+            <h1 class="text-5xl font-bold mb-2">Soc Ops</h1>
+            <p class="text-lg text-gray-600 font-light">Social Bingo for Your Next Mixer</p>
         </div>
 
+        <!-- Value Proposition -->
+        <div class="mb-10 animate-fadeInUp" style="animation-delay: 0.2s;">
+            <p class="text-gray-600 text-sm mb-6 leading-relaxed">
+                Break the ice and make meaningful connections. Find people who match the prompts, complete your bingo card, and win!
+            </p>
+        </div>
+
+        <!-- Game Rules Cards -->
+        <div class="grid grid-cols-3 gap-3 mb-10 animate-fadeInUp" style="animation-delay: 0.4s;">
+            <div class="bg-white rounded-lg p-4 shadow-sm border border-gray-200 transform hover:scale-105 transition-transform">
+                <div class="text-3xl mb-2">👥</div>
+                <p class="text-xs font-semibold text-gray-800">Find People</p>
+                <p class="text-xs text-gray-600 mt-1">Match the prompts</p>
+            </div>
+            <div class="bg-white rounded-lg p-4 shadow-sm border border-gray-200 transform hover:scale-105 transition-transform">
+                <div class="text-3xl mb-2">✅</div>
+                <p class="text-xs font-semibold text-gray-800">Tap Squares</p>
+                <p class="text-xs text-gray-600 mt-1">Mark your matches</p>
+            </div>
+            <div class="bg-white rounded-lg p-4 shadow-sm border border-gray-200 transform hover:scale-105 transition-transform">
+                <div class="text-3xl mb-2">🎉</div>
+                <p class="text-xs font-semibold text-gray-800">Get 5 in a Row</p>
+                <p class="text-xs text-gray-600 mt-1">You win!</p>
+            </div>
+        </div>
+
+        <!-- Detailed Rules -->
+        <div class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 mb-8 text-left animate-fadeInUp" style="animation-delay: 0.6s;">
+            <h2 class="font-semibold text-gray-800 mb-4 text-center">How It Works</h2>
+            <ol class="text-gray-600 text-sm space-y-3">
+                <li class="flex gap-3">
+                    <span class="font-bold text-accent flex-shrink-0">1</span>
+                    <span>Read the questions on the bingo card</span>
+                </li>
+                <li class="flex gap-3">
+                    <span class="font-bold text-accent flex-shrink-0">2</span>
+                    <span>Mingle with others at the event</span>
+                </li>
+                <li class="flex gap-3">
+                    <span class="font-bold text-accent flex-shrink-0">3</span>
+                    <span>Find someone who matches each question</span>
+                </li>
+                <li class="flex gap-3">
+                    <span class="font-bold text-accent flex-shrink-0">4</span>
+                    <span>Tap the square when you find a match</span>
+                </li>
+                <li class="flex gap-3">
+                    <span class="font-bold text-accent flex-shrink-0">5</span>
+                    <span>Complete 5 in a row to win!</span>
+                </li>
+            </ol>
+        </div>
+
+        <!-- CTA Button -->
         <button
             hx-post="/start"
             hx-target="#game-container"
             hx-swap="outerHTML"
-            class="w-full bg-accent text-white font-semibold py-4 px-8 rounded-lg text-lg active:bg-accent-light transition-colors">
-            Start Game
+            class="w-full bg-accent text-white font-semibold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-lg animate-fadeInUp relative overflow-hidden group"
+            style="animation-delay: 0.8s;">
+            <span class="relative z-10">Start Playing Now</span>
+            <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-0 group-hover:opacity-20 transform group-hover:translate-x-full transition-all duration-500"></div>
         </button>
+
+        <!-- Trust signals -->
+        <p class="text-xs text-gray-500 mt-6 animate-fadeInUp" style="animation-delay: 1s;">
+            ✨ Perfect for team building, networking events & social mixers
+        </p>
     </div>
 </div>
 </div>
