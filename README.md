@@ -20,7 +20,7 @@ pip install -e ".[dev]"
 soc-ops
 ```
 
-Then open http://localhost:8000 and start a round.
+Then open [http://localhost:8000](http://localhost:8000) and start a round.
 
 ## 📚 Lab Guide
 
